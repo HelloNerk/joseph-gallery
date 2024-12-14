@@ -6,10 +6,10 @@ import { GalleryPageComponent } from './gallery/pages/gallery-page/gallery-page.
 import { CreditsPageComponent } from '@gallery/pages/credits-page/credits-page.component';
 
 export const routes: Routes = [
-    {path: 'joseph-gallery/home', component: HomeComponent},
-    {path: '', redirectTo: 'joseph-gallery/home', pathMatch: 'full'},
-    {path: 'joseph-gallery/gallery', component: GalleryPageComponent},
-    {path: 'joseph-gallery/credits', component: CreditsPageComponent},
-    {path: 'joseph-gallery/upload', component: UploadPageComponent},
-    {path: 'joseph-gallery/**', component: PageNotFoundComponent},
+    {path: 'home', component: HomeComponent},
+    {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path: 'gallery', component: GalleryPageComponent},
+    {path: 'credits', component: CreditsPageComponent},
+    {path: 'upload', component: UploadPageComponent},
+    {path: '**', component: PageNotFoundComponent},
 ];
