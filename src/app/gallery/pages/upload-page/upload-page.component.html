@@ -1,0 +1,32 @@
+<section class="upload-container">
+    <h1>Upload Your Memories</h1>
+    
+    <form (ngSubmit)="uploadPhoto()" class="form-container">
+      <div class="image-name-container">
+        <label class="image-name-label" for="name">Image Name</label>
+        <input class="image-name-input" type="text" id="name" [(ngModel)]="imageTitle" name="name" required />
+      </div>
+  
+      <div class="image-description-container">
+        <label class="image-description-label" for="description">Description</label>
+        <textarea class="image-description-textarea" id="description" [(ngModel)]="imageDescription" name="description" required></textarea>
+      </div>
+  
+      <div class="dropzone-container">
+        <input (change)="changeInput($event)" type="file" id="file" class="inputfile" name="file" accept="image/*">
+        <label for="file">
+          <ng-container *ngIf="imageUrl; else placeholder">
+            <img [src]="imageUrl" alt="Preview" class="image-preview"/>
+          </ng-container>
+          <ng-template #placeholder>
+            <span class="material-symbols-outlined">upload_file</span>
+            <p>Choose a file</p>
+          </ng-template>
+        </label>
+      </div>
+  
+      <button class="upload" type="submit">Upload</button>
+    </form>
+</section>
+  
+  

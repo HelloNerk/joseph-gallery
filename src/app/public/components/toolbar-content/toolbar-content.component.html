@@ -1,0 +1,41 @@
+<nav [class.hidden]="isToolbarHidden" class="toolbar-content">
+  <img src="logo.svg" alt="Logo Nerk">
+  <ul class="nav-list">
+    <li *ngIf="!isMobile" class="nav-item">
+      <a class="nav-link" href="/home">Home</a>
+    </li>
+    <li *ngIf="!isMobile" class="nav-item">
+      <a class="nav-link" href="/gallery">Gallery</a>
+    </li>
+    <li *ngIf="!isMobile" class="nav-item">
+      <a class="nav-link" href="/credits">Credits</a>
+    </li>
+    <button (click)="onMenuClick()" *ngIf="isMobile" class="menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </ul>
+  <a href="/upload" class="upload-button">
+    <span class="material-symbols-outlined">publish</span>
+  </a>
+</nav>
+
+<!-- Fondo semitransparente -->
+<div *ngIf="isOpen" class="backdrop" (click)="onMenuClick()"></div>
+
+<!-- Menú móvil -->
+<div class="toolbar-content-mobile" [class.open]="isOpen" [class.close]="!isOpen">
+  <button (click)="onMenuClick()" class="close-button">
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <ul class="nav-list nav-list-mobile">
+    <li class="nav-item nav-item-mobile">
+      <a class="nav-link nav-link-mobile" href="/home" (click)="onMenuClick()">Home</a>
+    </li>
+    <li class="nav-item nav-item-mobile">
+      <a class="nav-link nav-link-mobile" href="/gallery" (click)="onMenuClick()">Gallery</a>
+    </li>
+    <li class="nav-item nav-item-mobile">
+      <a class="nav-link nav-link-mobile" href="/credits" (click)="onMenuClick()">Credits</a>
+    </li>
+  </ul>
+</div>

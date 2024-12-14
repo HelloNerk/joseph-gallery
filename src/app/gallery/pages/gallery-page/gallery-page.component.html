@@ -1,0 +1,6 @@
+<h1 class="title">Gallery</h1>
+<h2 class="subtitle">I just capture the essence of moments 📸</h2><!--🎇✨-->
+<div class="gallery">
+  <img *ngFor="let photo of data" [src]="photo.url" [alt]="photo.title" loading="lazy" />
+</div>
+

@@ -1,27 +1,76 @@
-# V18JosephGallery
+# Joseph Gallery
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+Joseph Gallery es una galería dinámica y responsiva construida con Angular y Firebase. La aplicación permite a los usuarios subir imágenes, almacenar metadatos y visualizar una galería estilizada de manera moderna.
 
-## Development server
+## 🚀 Características
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- 📷 **Subida de imágenes**: Los usuarios pueden cargar imágenes con un nombre y una descripción.
+- 🗂️ **Almacenamiento de metadatos**: Los datos de las imágenes (nombre, descripción y fecha) se guardan en Firestore.
+- 💾 **Almacenamiento en Firebase Storage**: Las imágenes se almacenan de forma segura en Firebase Storage.
+- 📱 **Interfaz responsiva**: Diseñada para funcionar bien en dispositivos móviles y de escritorio.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🛠️ Tecnologías Utilizadas
 
-## Build
+- **Angular**: Framework para construir la aplicación web.
+- **Firebase**:
+  - Firebase Storage: Almacenamiento de las imágenes.
+  - Firestore: Base de datos para los metadatos de las imágenes.
+- **HTML, CSS, TypeScript**: Para la estructura, el estilo y la lógica del proyecto.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 🚀 Cómo Ejecutar el Proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 1. Clonar el Repositorio
+Clona el proyecto desde GitHub:
+```bash
+git clone https://github.com/HelloNerk/joseph-gallery.git
+cd joseph-gallery
+```
 
-## Running end-to-end tests
+### 2. Instalar Dependencias
+Instala las dependencias necesarias:
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 3. Ejecutar el Servidor de Desarrollo
+Inicia el servidor de desarrollo:
+```bash
+ng serve
+```
+### 4. Acceder a la Aplicación
+Abre tu navegador y navega a:
+```bash
+http://localhost:4200
+```
 
-## Further help
+## 📋 Notas
+### Configuración de Firebase
+Asegúrate de configurar correctamente las credenciales de Firebase en el archivo src/environments/environment.ts:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: "TU_API_KEY",
+    authDomain: "TU_AUTH_DOMAIN",
+    projectId: "TU_PROJECT_ID",
+    storageBucket: "TU_STORAGE_BUCKET",
+    messagingSenderId: "TU_MESSAGING_SENDER_ID",
+    appId: "TU_APP_ID",
+    measurementId: "TU_MEASUREMENT_ID",
+  }
+};
+```
+
+## 🤝 Contribuciones
+¡Las contribuciones son bienvenidas! Si deseas mejorar el proyecto, por favor abre un Issue o envía un Pull Request.
+
+## 🧑‍💻 Autor
+Desarrollado por Joseph Alexis Huamani Mandujano, estudiante de Ingeniería de Software en la UPC, como un proyecto para aprender y explorar la integración de Angular con Firebase.
+
+## ⚖️ Licencia
+Este proyecto está bajo la licencia MIT. Puedes usarlo libremente para propósitos educativos y personales.

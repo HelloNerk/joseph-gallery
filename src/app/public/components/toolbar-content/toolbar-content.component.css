@@ -1,0 +1,146 @@
+.toolbar-content{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    padding: 20px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .toolbar-content.hidden {
+    transform: translateY(-100%);
+  }
+  
+  .nav-list{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+  
+  .nav-item{
+    list-style: none;
+  }
+  
+  .nav-link{
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    padding: 0 10px;
+  }
+  
+  .nav-link::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+  }
+  
+  
+  .nav-link:hover::after{
+    width: 100%;
+  }
+  
+  .upload-button{
+    background-color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  span{
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    overflow: hidden;
+  }
+  
+  span:hover{
+    cursor: pointer;
+  }
+  
+  .menu{
+    background-color: transparent;
+    border: none;
+    
+  }
+
+
+  .close{
+    background-color: transparent;
+    border: none;
+  }
+
+  /* Mobile */
+.toolbar-content-mobile {
+  position: fixed; /* Cambiar a fixed para que se posicione relativo a la ventana del navegador */
+  top: 0;
+  right: 0; /* Posiciona el menú al lado derecho */
+  z-index: 1001;
+  background-color: white;
+  width: 80%; /* Ajusta el ancho según tus necesidades */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translateX(100%); /* Inicialmente fuera de la vista */
+  transition: transform 0.3s ease-in-out;
+}
+
+.toolbar-content-mobile.open {
+  transform: translateX(0); /* Desliza el menú hacia dentro */
+}
+
+.toolbar-content-mobile.close {
+  transform: translateX(100%); /* Desliza el menú hacia fuera */
+}
+
+/* Estilos para el fondo semitransparente */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+  z-index: 1000; /* Debajo del menú móvil */
+}
+
+/* Estilos para el botón de cerrar */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+/* Estilos para la lista de navegación móvil */
+.nav-list-mobile {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item-mobile {
+  margin: 20px 0;
+}
+
+.nav-link-mobile {
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+}
