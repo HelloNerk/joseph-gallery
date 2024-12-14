@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/joseph-gallery/",
             "outputPath": "dist/v18-joseph-gallery",
             "index": "src/index.html",
             "browser": "src/main.ts",
